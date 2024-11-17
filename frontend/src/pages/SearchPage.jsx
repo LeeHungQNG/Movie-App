@@ -34,7 +34,7 @@ const SearchPage = () => {
     }
   };
 
-  console.log(results);
+ 
 
   return (
     <div className="bg-black min-h-screen text-white">

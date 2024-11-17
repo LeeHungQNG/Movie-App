@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 import dayjs from 'dayjs';
 const SearchHistoryPage = () => {
   const [searchHistory, setSearchHistory] = useState([]);
-  console.log('🚀 ~ SearchHistoryPage ~ searchHistory:', searchHistory);
+ 
 
   useEffect(() => {
     const getSearchHistory = async () => {
