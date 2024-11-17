@@ -5,11 +5,11 @@ import { useAuthStore } from '../store/authUser';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuthStore();
+  const { login, isLogginIn } = useAuthStore();
 
   const handleSignin = (e) => {
     e.preventDefault();
-  
+
     login({ email, password });
   };
 
@@ -54,8 +54,8 @@ const LoginPage = () => {
               />
             </div>
 
-            <button type="submit" className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700">
-              Login
+            <button disabled={isLogginIn} type="submit" className="w-full py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700">
+              {isLogginIn ? 'Loading...' : 'Login'}
             </button>
           </form>
 
