@@ -1,6 +1,6 @@
-import HomeScreen from './HomeScreen';
-import AuthScreen from './AuthScreen';
-import { useAuthStore } from '../../store/authUser';
+import HomeScreen from './HomeScreen.jsx';
+import AuthScreen from './AuthScreen.jsx';
+import { useAuthStore } from '../../store/authUser.jsx';
 
 const HomePage = () => {
   const { user } = useAuthStore();

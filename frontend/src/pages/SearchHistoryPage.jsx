@@ -1,13 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
-import { SMALL_IMG_BASE_URL } from '../utils/constants';
+import Navbar from '../components/Navbar.jsx';
+import { SMALL_IMG_BASE_URL } from '../utils/constants.js';
 import { Trash } from 'lucide-react';
 import toast from 'react-hot-toast';
 import dayjs from 'dayjs';
 const SearchHistoryPage = () => {
   const [searchHistory, setSearchHistory] = useState([]);
- 
 
   useEffect(() => {
     const getSearchHistory = async () => {

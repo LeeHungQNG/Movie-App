@@ -1,17 +1,16 @@
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navbar.jsx';
 import { Info, Play } from 'lucide-react';
-import useGetTrendingContent from '../../hooks/useGetTrendingContent';
-import { MOVIE_CATEGORIES, ORIGINAL_IMG_BASE_URL, TV_CATEGORIES } from '../../utils/constants';
-import { useContentStore } from '../../store/content';
-import MovieSlider from '../../components/MovieSlider';
+import useGetTrendingContent from '../../hooks/useGetTrendingContent.jsx';
+import { MOVIE_CATEGORIES, ORIGINAL_IMG_BASE_URL, TV_CATEGORIES } from '../../utils/constants.js';
+import { useContentStore } from '../../store/content.js';
+import MovieSlider from '../../components/MovieSlider.jsx';
 import { useState } from 'react';
 
 const HomeScreen = () => {
   const { trendingContent } = useGetTrendingContent();
   const { contentType } = useContentStore();
   const [imgLoading, setImgLoading] = useState(true);
-
 
   if (!trendingContent)
     return (

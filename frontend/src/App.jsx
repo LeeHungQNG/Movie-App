@@ -1,21 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import HomePage from './pages/home/HomePage';
-import Footer from './components/Footer';
+import LoginPage from './pages/LoginPage.jsx';
+import SignupPage from './pages/SignupPage.jsx';
+import HomePage from './pages/home/HomePage.jsx';
+import Footer from './components/Footer.jsx';
 import { Toaster } from 'react-hot-toast';
 import { useAuthStore } from './store/authUser';
 import { Loader } from 'lucide-react';
-import WatchPage from './pages/WatchPage';
-import SearchPage from './pages/SearchPage';
-import SearchHistoryPage from './pages/SearchHistoryPage';
-import NotFoundPage from './pages/404';
+import WatchPage from './pages/WatchPage.jsx';
+import SearchPage from './pages/SearchPage.jsx';
+import SearchHistoryPage from './pages/SearchHistoryPage.jsx';
+import NotFoundPage from './pages/404.jsx';
 
 function App() {
   const { user, isCheckingAuth, authCheck } = useAuthStore();
-  
 
   useEffect(() => {
     authCheck();

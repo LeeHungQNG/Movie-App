@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { useContentStore } from '../store/content';
+import { useContentStore } from '../store/content.js';
 import axios from 'axios';
-import WatchPageSkeleton from '../components/skeletons/WatchPageSkeleton';
-import Navbar from '../components/Navbar';
+import WatchPageSkeleton from '../components/skeletons/WatchPageSkeleton.jsx';
+import Navbar from '../components/Navbar.jsx';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { ORIGINAL_IMG_BASE_URL, SMALL_IMG_BASE_URL } from '../utils/constants';
-import { formatReleaseDate } from '../utils/dateFunction';
+import { ORIGINAL_IMG_BASE_URL, SMALL_IMG_BASE_URL } from '../utils/constants.js';
+import { formatReleaseDate } from '../utils/dateFunction.js';
 import ReactPlayer from 'react-player';
 
 const WatchPage = () => {

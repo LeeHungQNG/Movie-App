@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useContentStore } from '../store/content';
+import { useContentStore } from '../store/content.js';
 import axios from 'axios';
 
 const useGetTrendingContent = () => {
