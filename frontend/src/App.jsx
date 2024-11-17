@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import LoginPage from './pages/LoginPage.jsx';
-import SignupPage from './pages/SignupPage.jsx';
+import SignUpPage from './pages/SignUpPage.jsx';
 import HomePage from './pages/home/HomePage.jsx';
 import Footer from './components/Footer.jsx';
 import { Toaster } from 'react-hot-toast';
@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={'/'} />} />
-        <Route path="/signup" element={!user ? <SignupPage /> : <Navigate to={'/'} />} />
+        <Route path="/signup" element={!user ? <SignUpPage /> : <Navigate to={'/'} />} />
 
         <Route path="/watch/:id" element={user ? <WatchPage /> : <Navigate to={'/login'} />} />
         <Route path="/search" element={user ? <SearchPage /> : <Navigate to={'/login'} />} />
