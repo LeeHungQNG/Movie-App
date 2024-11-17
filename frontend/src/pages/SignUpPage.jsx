@@ -10,8 +10,8 @@ const SignUpPage = () => {
   const emailValue = queryParameters.get('email');
 
   const [email, setEmail] = useState(emailValue || '');
-  const [username, setUsername] = useState('test@gmail.com');
-  const [password, setPassword] = useState('123456');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const { signup, isSigningUp } = useAuthStore();
 

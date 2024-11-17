@@ -59,6 +59,11 @@ const LoginPage = () => {
             </button>
           </form>
 
+          <div className="text-center text-gray-200">
+            Account for test: test@gmail.com <br />
+            Password: 123456
+          </div>
+
           <div className="text-center text-gray-400">
             Don't have an account?{' '}
             <Link to={'/signup'} className="text-red-500 hover:underline">
