@@ -12,12 +12,12 @@ import ReactPlayer from 'react-player';
 const WatchPage = () => {
   const { id } = useParams();
   const [trailers, setTrailers] = useState([]);
-  
+
   const [currentTrailerIdx, setCurrentTrailerIdx] = useState(0);
   const [loading, setLoading] = useState(true);
   const [content, setContent] = useState({});
   const [similarContent, setSimilarContent] = useState([]);
- 
+
   const { contentType } = useContentStore();
 
   const sliderRef = useRef(null);

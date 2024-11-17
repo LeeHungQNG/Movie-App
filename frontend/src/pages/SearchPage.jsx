@@ -34,8 +34,6 @@ const SearchPage = () => {
     }
   };
 
- 
-
   return (
     <div className="bg-black min-h-screen text-white">
       <Navbar />
@@ -69,12 +67,12 @@ const SearchPage = () => {
             return (
               <div key={result.id} className="bg-gray-800 p-4 rounded">
                 {activeTab === 'person' ? (
-                  <Link to={'/actor/' + result.name} className="flex flex-col items-center">
+                  <div className="flex flex-col items-center">
                     <img src={ORIGINAL_IMG_BASE_URL + result.profile_path} alt={result.name} />
                     <h2 className="mt-2 text-xl font-bold">{result.name}</h2>
-                  </Link>
+                  </div>
                 ) : (
-                  <Link to={'/watch/' + result.id}>
+                  <Link to={'/watch/' + result.id} onClick={() => setContentType(activeTab)}>
                     <img className="w-full h-auto rounded" src={ORIGINAL_IMG_BASE_URL + result.poster_path} alt={result.title || result.name} />
                     <h2 className="mt-2 text-xl font-bold">{result.title || result.name}</h2>
                   </Link>
